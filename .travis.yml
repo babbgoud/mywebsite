@@ -7,7 +7,7 @@ services:
 before_install:
   - docker build -t sandeepb3245/mywebsite .
   # log in to docker hub account
-  - echo $DOCKER_PASSWORD | docker login -u $DOCKER_ID --password_stdin
+  - echo $DOCKER_PASSWORD | docker login -u $DOCKER_ID --password-stdin
   # now push the above build images to docker hub
 after_success:
   - docker push sandeepb3245/mywebsite
